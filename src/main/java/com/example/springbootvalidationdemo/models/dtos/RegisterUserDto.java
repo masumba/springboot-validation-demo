@@ -1,16 +1,12 @@
 package com.example.springbootvalidationdemo.models.dtos;
 
-import java.util.Date;
-import javax.validation.Valid;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
-import javax.validation.constraints.Pattern.Flag;
-import javax.validation.constraints.Size;
-
 import com.example.springbootvalidationdemo.models.User;
 import lombok.Data;
+
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+import javax.validation.constraints.Pattern.Flag;
+import java.util.Date;
 
 @Data
 public class RegisterUserDto {

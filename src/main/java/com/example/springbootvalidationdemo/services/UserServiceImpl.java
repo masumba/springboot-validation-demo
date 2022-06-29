@@ -1,15 +1,15 @@
 package com.example.springbootvalidationdemo.services;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
 import com.example.springbootvalidationdemo.models.Address;
 import com.example.springbootvalidationdemo.models.User;
 import com.example.springbootvalidationdemo.repositories.AddressRepository;
 import com.example.springbootvalidationdemo.repositories.UserRepository;
 import com.example.springbootvalidationdemo.services.interfaces.UserService;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
