@@ -34,6 +34,7 @@ public class Address {
     private String state;
 
     @OneToOne(mappedBy = "address")
+    @JsonIgnoreProperties({"address","reservations"})
     private User user;
 
     @Override

@@ -45,10 +45,10 @@ public class User {
 
     @OneToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "address_id", referencedColumnName = "id", nullable = false)
-    /*@JsonIgnoreProperties("user")*/
+    @JsonIgnoreProperties("user")
     private Address address;
 
-    @OneToMany(targetEntity = Reservation.class, mappedBy = "user")
+    @OneToMany(fetch = FetchType.EAGER,targetEntity = Reservation.class, mappedBy = "user")
     @JsonManagedReference(value = "user-reservations")
     @ToString.Exclude
     private List<Reservation> reservations;

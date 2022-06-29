@@ -1,6 +1,7 @@
 package com.example.springbootvalidationdemo.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 import lombok.experimental.Accessors;
 import org.hibernate.Hibernate;
@@ -41,6 +42,7 @@ public class Reservation {
     @ManyToOne(targetEntity = User.class, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "id")
     @JsonBackReference(value = "user-reservations")
+    @JsonIgnoreProperties({"address","reservations"})
     private User user;
 
     @Lob
